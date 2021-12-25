@@ -1,11 +1,10 @@
 import React, { component, useState } from 'react';
 import { StyleSheet, Text, View, ImageBackground, Image } from 'react-native';
 import { TextInput, Avatar, Button, Card, Title, Paragraph } from 'react-native-paper';
-import { shadowColor } from 'react-native/Libraries/Components/View/ReactNativeStyleAttributes';
 const LeftContent = props => <Avatar.Icon {...props} icon="folder" />
 
 import styled from 'styled-components/native';
-const Login = () => {
+const ForgotPassword = () => {
 
     const [password, setPassword] = useState(false)
     const [showpassword, setShowPassword] = useState(false)
@@ -23,22 +22,22 @@ const Login = () => {
                 <Card.Content>
                     <Image style={styles.tinyLogo} source={require('../../assets/adaptive-icon.png')}
                     />
-                    <Title>Login to your account</Title>
-                    <TextInput style={styles.formControl} label="Username/Email" right={<TextInput.Icon name="email" />} />
-                    <TextInput style={styles.formControl} label="Password" secureTextEntry={!password} right={<TextInput.Icon name={eyeIcon} onPress={(e) => togglePassword()} />} />
-                    <Text style={styles.leftAlign}>Forgot password ?</Text>
-                    <Button icon="login" mode="contained" onPress={() => console.log('Pressed')}>
-                        Login
+                    <Title>Reset your password</Title>
+                    <TextInput style={styles.formControl} label="Registered Email" right={<TextInput.Icon name="email" />} />
+                    <TextInput style={styles.formControl} label="New Password" secureTextEntry={!password} right={<TextInput.Icon name={eyeIcon} onPress={(e) => togglePassword()} />} />
+                    <TextInput style={styles.formControl} label="Confirm New Password" secureTextEntry={!password} right={<TextInput.Icon name={eyeIcon} onPress={(e) => togglePassword()} />} />
+                    <Button mode="contained" onPress={() => console.log('Pressed')}>
+                        Reset password
                     </Button>
+                    <Text style={styles.mt4}> Back to Login</Text>
 
-                    <Text style={styles.mt4}> Registered not yet ? Register now</Text>
                 </Card.Content>
 
             </Card>
         </ImageBackground>
     );
 }
-export default Login
+export default ForgotPassword
 const Container = styled.View`
   flex: 1;
   background-color: transparent;
@@ -62,7 +61,7 @@ const styles = StyleSheet.create({
 
     },
     mt4: {
-        marginTop: 20
+        marginTop: 10
     },
     leftAlign: {
         textAlign: "right",
@@ -80,7 +79,7 @@ const styles = StyleSheet.create({
         width: 150,
         height: 150,
         resizeMode: 'contain',
-        marginTop: "40%",
+        marginTop:"30%",
         alignSelf: 'center',
     },
     logo: {
