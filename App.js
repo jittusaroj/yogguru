@@ -1,5 +1,5 @@
 import React,{component} from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View,StatusBar,SafeAreaView } from 'react-native';
 import styled from 'styled-components/native';
 import Login from './src/screens/Login';
 import Register from './src/screens/Register';
@@ -8,6 +8,7 @@ import Haroscope from './src/screens/Haroscope';
 import Jodiac from './src/screens/Jodiac';
 import Astrologer from './src/screens/Astrologer';
  const App =()=>{
+  
     return (
         <>
          {/* <Login /> */}
@@ -18,6 +19,7 @@ import Astrologer from './src/screens/Astrologer';
          {/* <Register /> */}
         </>
       );
+    
 }
 export default App
 const Container = styled.View`
