@@ -4,7 +4,7 @@ import { TextInput, Avatar, Button, Card, Title, Paragraph } from 'react-native-
 const LeftContent = props => <Avatar.Icon {...props} icon="folder" />
 
 import styled from 'styled-components/native';
-const Register = () => {
+const Register = ({ navigation }) => {
 
     const [password, setPassword] = useState(false)
     const [showpassword, setShowPassword] = useState(false)
@@ -28,7 +28,7 @@ const Register = () => {
                     <TextInput style={styles.formControl} label="Password" secureTextEntry={!password} right={<TextInput.Icon name={eyeIcon} onPress={(e) => togglePassword()} />} />
                     <TextInput style={styles.formControl} label="Confirm Password" secureTextEntry={!password} right={<TextInput.Icon name={eyeIcon} onPress={(e) => togglePassword()} />} />
                     <Text style={styles.leftAlign}>Forgot password ?</Text>
-                    <Button mode="contained" onPress={() => console.log('Pressed')}>
+                    <Button mode="contained" onPress={() =>navigation.navigate('login')}>
                         Register
                     </Button>
                     <Text style={styles.mt4}> Allready Registered? Login now</Text>
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
     },
     bgTransparent: {
         backgroundColor: "transparent",
-        shadowColor:"transparent"
+        shadowColor: "transparent"
     },
     formControl: {
         marginBottom: 15,
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
         width: 150,
         height: 150,
         resizeMode: 'contain',
-        marginTop:70,
+        marginTop: 70,
         alignSelf: 'center',
     },
     logo: {

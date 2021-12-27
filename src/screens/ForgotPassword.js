@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, ImageBackground, Image } from 'react-native';
 import { TextInput, Avatar, Button, Card, Title, Paragraph } from 'react-native-paper';
 const LeftContent = props => <Avatar.Icon {...props} icon="folder" />
 
-import styled from 'styled-components/native';
+import styled from 'styled-components';
 const ForgotPassword = () => {
 
     const [password, setPassword] = useState(false)

@@ -5,7 +5,7 @@ import { shadowColor } from 'react-native/Libraries/Components/View/ReactNativeS
 const LeftContent = props => <Avatar.Icon {...props} icon="folder" />
 
 import styled from 'styled-components/native';
-const Login = () => {
+const Login = ({navigation}) => {
 
     const [password, setPassword] = useState(false)
     const [showpassword, setShowPassword] = useState(false)
@@ -26,7 +26,7 @@ const Login = () => {
                     <Title>Login to your account</Title>
                     <TextInput style={styles.formControl} label="Username/Email" right={<TextInput.Icon name="email" />} />
                     <TextInput style={styles.formControl} label="Password" secureTextEntry={!password} right={<TextInput.Icon name={eyeIcon} onPress={(e) => togglePassword()} />} />
-                    <Text style={styles.leftAlign}>Forgot password ?</Text>
+                    <Text style={styles.leftAlign} onPress={() =>navigation.navigate('forgetpassword')}>Forgot password ?</Text>
                     <Button icon="login" mode="contained" onPress={() => console.log('Pressed')}>
                         Login
                     </Button>
