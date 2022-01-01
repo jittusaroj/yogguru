@@ -25,10 +25,12 @@
     "react-native-paper-tabs": "^0.7.0",
     "react-native-safe-area-context": "3.3.2",
     "react-native-screens": "~3.10.1",
+    "react-native-simple-banner-carousel": "^1.0.0-alpha.2",
     "react-native-snap-carousel": "^3.9.1",
     "react-native-vector-icons": "^9.0.0",
     "react-native-web": "0.17.1",
-    "styled-components": "5.2.0"
+    "styled-components": "5.2.0",
+    "watchman": "^1.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

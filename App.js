@@ -11,13 +11,13 @@ import Astrologers from './src/screens/Astrologers';
 import Slider from './src/screens/Slider';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-
+import Home from './src/screens/Home';
 const Stack = createNativeStackNavigator();
 const App = () => {
 
   return (
     <>
-      <NavigationContainer>
+      {/* <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen name="login" component={Login} />
           <Stack.Screen name="register" component={Register} />
@@ -25,11 +25,12 @@ const App = () => {
           <Stack.Screen name="forgetpassword" component={ForgotPassword} />
           <Stack.Screen name="astrologer" component={Astrologer} />
         </Stack.Navigator>
-      </NavigationContainer>
+      </NavigationContainer> */}
+      <Home />
       {/* <Login /> */}
       {/* <Haroscope /> */}
       {/* <Jodiac /> */}
-      {/* <Astrologers /> */}
+      {/* <Astrologer /> */}
       {/* <Slider /> */}
       {/* <Astrologers /> */}
       {/* <ForgotPassword /> */}
